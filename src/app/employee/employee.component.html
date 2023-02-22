@@ -1,0 +1,15 @@
+<h2>Employee/Agent selected</h2>
+    <ng-container *ngIf="showMenu; else flightList">
+      <p>Enter Flights You Manage</p>
+      <button (click)="showMenu = false">Option 1</button>
+      <button (click)="goBack()">Quit to previous</button>
+    </ng-container>
+    <ng-template #flightList>
+      <p>List of Flights:</p>
+      <ul>
+        <li>LAX, Los Angeles → JFK, New York</li>
+        <li>DFW, Dallas → IAD, Washington DC</li>
+        <li>SEA, Seattle → MIA, Miami</li>
+      </ul>
+      <button (click)="showMenu = true">Quit to previous</button>
+    </ng-template>
